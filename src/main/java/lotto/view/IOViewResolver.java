@@ -48,7 +48,6 @@ public class IOViewResolver {
         try {
             outputViewMappings.get(dto.getClass()).accept(dto);
         } catch (NullPointerException e) {
-            e.printStackTrace();
             throw new NotFoundViewException();
         }
     }
